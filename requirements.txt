@@ -5,4 +5,3 @@ Pandas == 2.2.2
 Scikit-learn == 1.5.1
 Matplotlib == 3.9.2
 SHAP == 0.46.0
-ExtraTrees == 4.5.0
