@@ -58,14 +58,14 @@ features = np.array([feature_values])
 # 预测与 SHAP 可视化
 if st.button("Predict"):
     # 模型预测
-    predicted_class = model.predict(features)[0]
-    predicted_proba = model.predict_proba(features)[0]
+    predicted_class = model.predict(features)[1]
+    predicted_proba = model.predict_proba(features)[1]
 
     # 提取预测的类别概率
     probability = predicted_proba[predicted_class] * 100
 
     # 显示预测结果，使用 Matplotlib 渲染指定字体
-    text = f"Based on feature values, predicted possibility of {class_index} is {probability:.2f}%"
+    text = f"Based on feature values, predicted possibility of good responder is {probability:.2f}%"
     fig, ax = plt.subplots(figsize=(8, 1))
     ax.text(
         0.5, 0.5, text,
