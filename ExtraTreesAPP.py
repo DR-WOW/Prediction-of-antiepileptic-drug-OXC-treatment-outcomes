@@ -10,19 +10,20 @@ model = joblib.load('ExtraTrees.pkl')
 
 # 特征范围定义（根据提供的特征范围和数据类型）
 feature_ranges = {
+    "AGE": {"type": "numerical", "min": 0.0, "max": 18.0, "default": 5.0},
+    "WT": {"type": "numerical", "min": 0.0, "max": 200.0, "default": 20.0},
+    "BUN": {"type": "numerical", "min": 0.0, "max": 100.0, "default": 5.0},
     "SCR": {"type": "numerical", "min": 0.0, "max": 200.0, "default": 35.0},
-    "Cmin": {"type": "numerical", "min": 0.0, "max": 100.0, "default": 15.0},
-    "HCT": {"type": "numerical", "min": 0.0, "max": 100.0, "default": 35.0},
+    "CLCR": {"type": "numerical", "min": 0.0, "max": 500.0, "default": 90.0},
     "ALT": {"type": "numerical", "min": 0.0, "max": 500.0, "default": 20.0},
     "AST": {"type": "numerical", "min": 0.0, "max": 500.0, "default": 20.0},
-    "CLCR": {"type": "numerical", "min": 0.0, "max": 500.0, "default": 90.0},
-    "BUN": {"type": "numerical", "min": 0.0, "max": 100.0, "default": 5.0},
     "TBIL": {"type": "numerical", "min": 0.0, "max": 100.0, "default": 5.0},
     "DBIL": {"type": "numerical", "min": 0.0, "max": 100.0, "default": 5.0},
+     "HCT": {"type": "numerical", "min": 0.0, "max": 100.0, "default": 35.0},
     "MCH": {"type": "numerical", "min": 0.0, "max": 100.0, "default": 30.0},
-    "MCHC": {"type": "numerical", "min": 0.0, "max": 500.0, "default": 300.0},
-    
+     "Cmin": {"type": "numerical", "min": 0.0, "max": 100.0, "default": 15.0}
 }
+
 
 # Streamlit 界面
 st.title("Antiepileptic Drug (OXC) Treatment Outcome Prediction with SHAP Visualization")
